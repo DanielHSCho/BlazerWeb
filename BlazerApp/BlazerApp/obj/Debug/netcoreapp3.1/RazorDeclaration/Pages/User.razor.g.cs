@@ -75,22 +75,14 @@ using BlazerApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/binding")]
-    public partial class Binding : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/user")]
+    public partial class User : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 8 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\Binding.razor"
-       
-    int _value = 15;
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591
