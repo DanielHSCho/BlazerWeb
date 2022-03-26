@@ -96,23 +96,36 @@ using BlazerApp.Data;
     List<UserData> _users = new List<UserData>();
 
     string _inputName;
+    string _btnClass = "btn btn-primary";
 
     protected override void OnInitialized()
     {
         _users.Add(new UserData() { Name = "Daniel" });
         _users.Add(new UserData() { Name = "Hellena" });
         _users.Add(new UserData() { Name = "Arsene" });
+        RefreshButton();
     }
 
     void AddUser()
     {
         _users.Add(new UserData() { Name = _inputName });
         _inputName = string.Empty;
+        RefreshButton();
     }
 
     void KickUser(UserData user)
     {
         _users.Remove(user);
+        RefreshButton();
+    }
+
+    void RefreshButton()
+    {
+        if(_users.Count() % 2 == 0) {
+            _btnClass = "btn btn-primary";
+        } else {
+            _btnClass = "btn btn-secondary";
+        }
     }
 
 #line default
