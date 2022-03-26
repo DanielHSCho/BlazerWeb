@@ -75,6 +75,13 @@ using BlazerApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\User.razor"
+using BlazerApp.Data;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/user")]
     public partial class User : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -83,6 +90,34 @@ using BlazerApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 35 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\User.razor"
+       
+    List<UserData> _users = new List<UserData>();
+
+    string _inputName;
+
+    protected override void OnInitialized()
+    {
+        _users.Add(new UserData() { Name = "Daniel" });
+        _users.Add(new UserData() { Name = "Hellena" });
+        _users.Add(new UserData() { Name = "Arsene" });
+    }
+
+    void AddUser()
+    {
+        _users.Add(new UserData() { Name = _inputName });
+        _inputName = string.Empty;
+    }
+
+    void KickUser(UserData user)
+    {
+        _users.Remove(user);
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
