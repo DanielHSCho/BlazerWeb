@@ -75,6 +75,7 @@ using BlazerApp.Shared;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/binding")]
     public partial class Binding : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -82,6 +83,14 @@ using BlazerApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 7 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\Binding.razor"
+       
+    int _value = 15;
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
