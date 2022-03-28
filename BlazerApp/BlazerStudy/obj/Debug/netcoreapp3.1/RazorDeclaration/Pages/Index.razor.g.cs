@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazerApp.Pages
+namespace BlazerStudy.Pages
 {
     #line hidden
     using System;
@@ -13,71 +13,64 @@ namespace BlazerApp.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 1 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 2 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 4 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 5 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 6 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
+#line 7 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
-using BlazerApp;
+#line 8 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+using BlazerStudy;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\_Imports.razor"
-using BlazerApp.Shared;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\Index.razor"
-using BlazerApp.Data;
+#line 9 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+using BlazerStudy.Shared;
 
 #line default
 #line hidden
@@ -90,19 +83,6 @@ using BlazerApp.Data;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 15 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\Index.razor"
-            
-    protected override void OnInitialized()
-        {
-            
-        }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private PaymentService paymentService { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IFoodService foodService { get; set; }
     }
 }
 #pragma warning restore 1591
