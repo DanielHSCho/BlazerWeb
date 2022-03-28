@@ -13,33 +13,20 @@
 }
 else
 {
-<TableTemplate Items="forecasts">
+<TableTemplate Items="forecasts" TItem="WeatherForecast">
     <Header>
     <th>Date</th>
     <th>Temp. (C)</th>
     <th>Temp. (F)</th>
     <th>Summary</th>
     </Header>
+    <Row Context="forcast">
+        <td>@forcast.Date.ToShortDateString()</td>
+        <td>@forcast.TemperatureC</td>
+        <td>@forcast.TemperatureF</td>
+        <td>@forcast.Summary</td>
+    </Row>
 </TableTemplate>
-
-    <table class="table">
-        <thead>
-            <tr>
-               
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
 }
 
 @code {
