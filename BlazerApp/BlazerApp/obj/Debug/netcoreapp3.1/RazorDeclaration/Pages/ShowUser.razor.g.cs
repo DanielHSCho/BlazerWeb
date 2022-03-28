@@ -92,8 +92,33 @@ using BlazerApp.Data;
 #nullable restore
 #line 19 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\ShowUser.razor"
        
+    [CascadingParameter (Name ="ThemeColor")]
+    string _color { get; set; }
+
+
     [Parameter]
     public List<UserData> Users { get; set; }
+
+    [Parameter]
+    public EventCallback CallbackTest { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Users.Add(new UserData() { Name = "Daniel" });
+        Users.Add(new UserData() { Name = "Hellena" });
+        Users.Add(new UserData() { Name = "Arsene" });
+    }
+
+    public void AddUser(UserData user)
+    {
+        Users.Add(user);
+    }
+
+    public void KickUser(UserData user)
+    {
+        Users.Remove(user);
+        CallbackTest.InvokeAsync(null);
+    }
 
 #line default
 #line hidden
