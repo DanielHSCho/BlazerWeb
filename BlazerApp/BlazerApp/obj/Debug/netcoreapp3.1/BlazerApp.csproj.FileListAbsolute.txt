@@ -52,3 +52,5 @@ C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netc
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netcoreapp3.1\BlazerApp.csproj.CopyComplete
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\User.razor.g.cs
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netcoreapp3.1\Razor\Pages\User.razor.g.cs
+C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ShowUser.razor.g.cs
+C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\obj\Debug\netcoreapp3.1\Razor\Pages\ShowUser.razor.g.cs

@@ -91,7 +91,7 @@ using BlazerApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\User.razor"
+#line 22 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\User.razor"
        
     List<UserData> _users = new List<UserData>();
 
