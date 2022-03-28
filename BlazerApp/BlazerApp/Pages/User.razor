@@ -4,7 +4,7 @@
 
 <h3>Online Users</h3>
 
-<ShowUser Users="_users"></ShowUser>
+<ShowUser Users="_users" @ref="_showUser"></ShowUser>
 
 <br />
 
@@ -21,6 +21,7 @@
 
 @code {
     List<UserData> _users = new List<UserData>();
+    ShowUser _showUser;
 
     string _inputName;
     string _btnClass = "btn btn-primary";
@@ -35,14 +36,14 @@
 
     void AddUser()
     {
-        _users.Add(new UserData() { Name = _inputName });
+        _showUser.AddUser(new UserData() { Name = _inputName });
         _inputName = string.Empty;
         RefreshButton();
     }
 
     void KickUser(UserData user)
     {
-        _users.Remove(user);
+        _showUser.KickUser(user);
         RefreshButton();
     }
 
