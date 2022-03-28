@@ -1,14 +1,14 @@
 ﻿@page "/"
 
 @using BlazerApp.Data;
+@inject IFoodService foodService;
 
 <div>
-    @foreach(var food in _foodService.GetFoods()){ 
+    @foreach(var food in foodService.GetFoods()){ 
         <div>@food.Name</div>
         <div>@food.Price</div>
     }
 </div>
 
 @code{
-    IFoodService _foodService = new FastFoodService();
 }
