@@ -21,7 +21,7 @@
     public List<UserData> Users { get; set; }
 
     [Parameter]
-    public Action CallbackTest { get; set; }
+    public EventCallback CallbackTest { get; set; }
 
     protected override void OnInitialized()
     {
@@ -38,6 +38,6 @@
     public void KickUser(UserData user)
     {
         Users.Remove(user);
-        CallbackTest.Invoke();
+        CallbackTest.InvokeAsync(null);
     }
 }
