@@ -4,7 +4,7 @@
 
 <h3>Online Users</h3>
 
-<ShowUser Users="_users" @ref="_showUser"></ShowUser>
+<ShowUser Users="_users" CallbackTest="CallbackTestFunc" @ref="_showUser"></ShowUser>
 
 <br />
 
@@ -14,7 +14,7 @@
             <input class="form-control" placeholder="Add User" @bind-value="_inputName"/>
         </div>
         <div class="col">
-            <button class="@_btnClass" type="button" @onclick="AddUser" disabled="@(_users.Count() >= 5)">Add a User</button>
+            <button class="btn btn-primary" type="button" @onclick="AddUser" disabled="@(_users.Count() >= 5)">Add a User</button>
         </div>
     </div>
 </div>
@@ -24,35 +24,21 @@
     ShowUser _showUser;
 
     string _inputName;
-    string _btnClass = "btn btn-primary";
-
-    protected override void OnInitialized()
-    {
-        _users.Add(new UserData() { Name = "Daniel" });
-        _users.Add(new UserData() { Name = "Hellena" });
-        _users.Add(new UserData() { Name = "Arsene" });
-        RefreshButton();
-    }
 
     void AddUser()
     {
         _showUser.AddUser(new UserData() { Name = _inputName });
         _inputName = string.Empty;
-        RefreshButton();
     }
 
     void KickUser(UserData user)
     {
         _showUser.KickUser(user);
-        RefreshButton();
     }
 
-    void RefreshButton()
+    void CallbackTestFunc()
     {
-        if(_users.Count() % 2 == 0) {
-            _btnClass = "btn btn-primary";
-        } else {
-            _btnClass = "btn btn-secondary";
-        }
+        _inputName = "CallbackTest";
+        StateHasChanged();
     }
 }
