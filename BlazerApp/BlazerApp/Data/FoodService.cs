@@ -40,4 +40,13 @@ namespace BlazerApp.Data
             return foods;
         }
     }
+
+    public class PaymentService
+    {
+        IFoodService _service;
+        public PaymentService(IFoodService service)
+        {
+            _service = service;
+        }
+    }
 }
