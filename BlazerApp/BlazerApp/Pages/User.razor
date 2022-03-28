@@ -4,20 +4,7 @@
 
 <h3>Online Users</h3>
 
-<p>
-    Users : <b>@_users.Count()</b>
-</p>
-
-<br/>
-
-<ul class="list-group">
-    @foreach(var user in _users) {
-        <li @key="user" class="list-group-item">
-            <button type="button" class="btn btn-link" @onclick="(()=> KickUser(user))">Kick</button>
-            <label>@user.Name</label>
-        </li>
-    }
-</ul>
+<ShowUser></ShowUser>
 
 <br />
 
