@@ -75,7 +75,7 @@ using BlazerApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class TableTemplate : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class TableTemplate<TItem> : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,11 +83,16 @@ using BlazerApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\TableTemplate.razor"
+#line 20 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerApp\Pages\TableTemplate.razor"
        
     [Parameter]
     public RenderFragment Header { get; set; }
 
+    [Parameter]
+    public RenderFragment<TItem> Row { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
 
 #line default
 #line hidden
