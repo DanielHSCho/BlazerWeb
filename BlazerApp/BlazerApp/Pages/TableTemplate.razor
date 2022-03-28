@@ -1,4 +1,6 @@
-﻿<h3>TableTemplate</h3>
+﻿@typeparam TItem
+
+<h3>TableTemplate</h3>
 
 <table class="table">
     <thead>
@@ -7,13 +9,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var forecast in forecasts) {
-            <tr>
-                <td>@forecast.Date.ToShortDateString()</td>
-                <td>@forecast.TemperatureC</td>
-                <td>@forecast.TemperatureF</td>
-                <td>@forecast.Summary</td>
-            </tr>
+        @foreach (var item in Items) {
+        <tr>
+          @Row(item)
+        </tr>
         }
     </tbody>
 </table>
@@ -23,5 +22,8 @@
     public RenderFragment Header { get; set; }
 
     [Parameter]
-    public IReadOnlyList<BlazerApp.Data.WeatherForecast> Items { get; set; }
+    public RenderFragment<TItem> Row { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
 }
