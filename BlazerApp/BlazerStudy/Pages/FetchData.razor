@@ -50,12 +50,14 @@ else
                         </button>
                     </div>
                     <div class="modal-body">
-                        <label for="TemperatureC">TemperatureC</label>
-                        <input class="form-control" type="text" placeholder="TempratureC" @bind="_addForcast.TemperatureC" />
-                        <label for="Summary">Summary</label>
-                        <input class="form-control" type="text" placeholder="Summary" @bind="_addForcast.Summary" />
-                        <br />
-                        <button class="btn btn-primary" @onclick="SaveForcast">Save</button>
+                        <EditForm Model="_addForcast" OnValidSubmit="SaveForcast">
+                            <label for="TemperatureC">TemperatureC</label>
+                            <InputNumber class="form-control" placeholder="TempratureC" @bind-Value="_addForcast.TemperatureC"/>
+                            <label for="Summary">Summary</label>
+                            <InputText class="form-control" placeholder="Summary" @bind-Value="_addForcast.Summary" />
+                            <br />
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </EditForm>
                     </div>
                 </div>
             </div>
