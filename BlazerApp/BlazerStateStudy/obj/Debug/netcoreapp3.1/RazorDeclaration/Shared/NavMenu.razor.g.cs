@@ -83,7 +83,7 @@ using BlazerStateStudy.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Shared\NavMenu.razor"
+#line 40 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

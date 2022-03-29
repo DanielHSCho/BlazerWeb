@@ -50,3 +50,5 @@ C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Deb
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Debug\netcoreapp3.1\BlazerStateStudy.pdb
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Debug\netcoreapp3.1\BlazerStateStudy.genruntimeconfig.cache
 C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Debug\netcoreapp3.1\BlazerStateStudy.csproj.CopyComplete
+C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\JSInterop.razor.g.cs
+C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\obj\Debug\netcoreapp3.1\Razor\Pages\JSInterop.razor.g.cs
