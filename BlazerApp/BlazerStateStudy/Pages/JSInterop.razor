@@ -9,9 +9,24 @@
     </button>
 </div>
 
+<div>
+    <button type="button" class="btn btn-primary" @onclick="InputName">
+        Input Name
+    </button>
+    <p>@_name</p>
+</div>
+
 @code {
+    string _name = "";
+
     public async void HelloWorld()
     {
         await JSRuntime.InvokeVoidAsync("testFunction.helloWorld", null);
+    }
+
+    public async void InputName()
+    {
+        _name = await JSRuntime.InvokeAsync<string>("testFunction.inputName", "Input it Name");
+        StateHasChanged();
     }
 }
