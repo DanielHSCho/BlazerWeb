@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazerStudy.Pages
+namespace BlazerStateStudy.Pages
 {
     #line hidden
     using System;
@@ -13,71 +13,71 @@ namespace BlazerStudy.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 1 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 2 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 4 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 5 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 6 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
+#line 7 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
-using BlazerStudy;
+#line 8 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
+using BlazerStateStudy;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\_Imports.razor"
-using BlazerStudy.Shared;
+#line 9 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\_Imports.razor"
+using BlazerStateStudy.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\Pages\FetchData.razor"
-using BlazerStudy.Data;
+#line 3 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Pages\FetchData.razor"
+using BlazerStateStudy.Data;
 
 #line default
 #line hidden
@@ -91,34 +91,13 @@ using BlazerStudy.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 74 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStudy\Pages\FetchData.razor"
+#line 39 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Pages\FetchData.razor"
        
-    private List<WeatherForecast> _forecasts;
-
-    bool _showPopup = false;
-    WeatherForecast _addForcast;
+    private WeatherForecast[] forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        _forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
-
-    void AddNewForcast()
-    {
-        _showPopup = true;
-        _addForcast = new WeatherForecast();
-    }
-
-    void SaveForcast()
-    {
-        _showPopup = false;
-        _addForcast.Date = DateTime.Now;
-        _forecasts.Add(_addForcast);
-    }
-
-    void ClosePopup()
-    {
-        _showPopup = false;
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
 
 #line default
