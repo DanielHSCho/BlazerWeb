@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace BlazerStudy
 {
+    // SPA Single Page App
+
+
     public class Program
     {
         public static void Main(string[] args)
