@@ -51,6 +51,12 @@ else
                     </div>
                     <div class="modal-body">
                         <EditForm Model="_addForcast" OnValidSubmit="SaveForcast">
+                            @*Form Validation 기능 On*@
+                            <DataAnnotationsValidator/>
+
+                            @*에러가 있으면 메세지 상세 출력*@
+                            <ValidationSummary/>
+
                             <label for="TemperatureC">TemperatureC</label>
                             <InputNumber class="form-control" placeholder="TempratureC" @bind-Value="_addForcast.TemperatureC"/>
                             <label for="Summary">Summary</label>
