@@ -1,4 +1,6 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@inject BlazerStateStudy.Data.CounterState CounterState
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">BlazerStateStudy</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -25,6 +27,10 @@
     </ul>
 </div>
 
+<div>
+    <p style="color:white">Counter : @CounterState.Count</p>
+</div>
+
 @code {
     private bool collapseNavMenu = true;
 
@@ -33,5 +39,15 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    protected override void OnInitialized()
+    {
+        CounterState.OnStatChanged += onStateChanged;
+    }
+
+    void onStateChanged()
+    {
+        this.StateHasChanged();
     }
 }
