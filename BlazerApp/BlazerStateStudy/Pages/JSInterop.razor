@@ -1,4 +1,5 @@
 ﻿@page "/JSInterop"
+@inject IJSRuntime JSRuntime
 
 <h3>JSInterop</h3>
 
@@ -9,7 +10,8 @@
 </div>
 
 @code {
-    public void HelloWorld()
+    public async void HelloWorld()
     {
+        await JSRuntime.InvokeVoidAsync("testFunction.helloWorld", null);
     }
 }

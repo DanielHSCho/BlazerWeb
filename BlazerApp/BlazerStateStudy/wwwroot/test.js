@@ -1,6 +1,6 @@
 ﻿var func = (function () {
     window.testFunction = {
-        hellowWorld: function () {
+        helloWorld: function () {
             return alert('Hello World');
         }
     };
