@@ -75,7 +75,7 @@ using BlazerStateStudy.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,7 +83,7 @@ using BlazerStateStudy.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Shared\NavMenu.razor"
+#line 35 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -94,9 +94,25 @@ using BlazerStateStudy.Shared;
         collapseNavMenu = !collapseNavMenu;
     }
 
+    protected override void OnInitialized()
+    {
+        CounterState.OnStatChanged += onStateChanged;
+    }
+
+    void onStateChanged()
+    {
+        this.StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        CounterState.OnStatChanged -= onStateChanged;
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private BlazerStateStudy.Data.CounterState CounterState { get; set; }
     }
 }
 #pragma warning restore 1591
