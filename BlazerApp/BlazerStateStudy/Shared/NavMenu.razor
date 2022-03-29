@@ -1,4 +1,5 @@
 ﻿@inject BlazerStateStudy.Data.CounterState CounterState
+@implements IDisposable
 
 <div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">BlazerStateStudy</a>
@@ -49,5 +50,10 @@
     void onStateChanged()
     {
         this.StateHasChanged();
+    }
+
+    void IDisposable.Dispose()
+    {
+        CounterState.OnStatChanged -= onStateChanged;
     }
 }
