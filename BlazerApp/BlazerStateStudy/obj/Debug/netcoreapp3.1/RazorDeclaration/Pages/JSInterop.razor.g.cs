@@ -84,11 +84,19 @@ using BlazerStateStudy.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Pages\JSInterop.razor"
+#line 19 "C:\Users\helle\Projects\2_WebServer\BlazerApp\BlazerApp\BlazerStateStudy\Pages\JSInterop.razor"
        
+    string _name = "";
+
     public async void HelloWorld()
     {
         await JSRuntime.InvokeVoidAsync("testFunction.helloWorld", null);
+    }
+
+    public async void InputName()
+    {
+        _name = await JSRuntime.InvokeAsync<string>("testFunction.inputName", "Input it Name");
+        StateHasChanged();
     }
 
 #line default
